@@ -1,0 +1,38 @@
+# ES UN ANAGRAMA?
+
+"""ESCRIBE UNA FUNCION QUE RECIBA DOS PALABRAS STRING  Y RETORNE UN VERDADERO O FALSO
+(BOOL) SEGÚN SEAN O NO ANAGRAMAS
+
+-UN ANAGRAMA CONSISTE EN FORMAR UNA PALABRA REORDENANDO TODAS LAS LETRAS DE LA PALABRA INICIAL
+
+-NO HACE FALTA COMPROBAR QUE AMBAS PALABRAS EXISTAN
+
+-DOS PALABRAS EXACTAMENTE IGUALES NO SON ANAGRAMAS"""
+
+
+def son_anagramas (palabra1, palabra2):
+
+    uno = palabra1
+    dos = palabra2
+    lista1 = []
+    lista2 = []
+    uno = uno.upper()
+    dos = dos.upper()
+
+    for i in range (0, len(uno)):
+        lista1.append(uno[i])
+        lista1.sort()
+        if i == len(uno)-1:
+            print(lista1)
+    for i in range (0, len(dos)):
+        lista2.append(dos[i])
+        lista2.sort()
+        if i == len(dos)-1:
+            print(lista2)
+    if lista1 == lista2:
+        print("son ANAGRAMAS")
+    elif lista1 != lista2:
+        print("no son ANAGRAMAS")
+
+
+print(son_anagramas("rOmA", "aMoR"))
